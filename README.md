@@ -7,69 +7,34 @@
 
 ## 1 PERCEPTRONALGORITHM
 
-### The Perceptron is inspired by the infor-
+The Perceptron is inspired by the information processing of a single neural cell called a neuron.
+A neuron accepts input signals via its dendrites, which pass the electrical signal down to the cell body.
+In a similar way, the Perceptron receives input signals from examples of training data that we weight and combined in a
+linear equation called the activation.
 
-### mation processing of a single neural cell
+Mathematically,
 
-### called a neuron.
+ g(x) =wt*xa
 
-### A neuron accepts input signals via its
-
-### dendrites, which pass the electrical signal
-
-### down to the cell body.
-
-### In a similar way, the Perceptron receives
-
-### input signals from examples of training
-
-### data that we weight and combined in a
-
-### linear equation called the activation.
-
-### Mathematically,
-
-### g(x) =w
-
-##### t
-
-### xa
-
-### where w is the weight vector and xa
-
-### is the augmented feature vector.
+where w is the weight vector and xa is the augmented feature vector.
 
 ## 2 GRADIENTDESCENT
 
-### Gradient Descent is the process of mini-
+Gradient Descent is the process of minimizing a function by following the gradients of the cost function.
+This involves knowing the form of the cost as well as the derivative so that from a given point you know the gradient and
+can move in that direction, e.g. downhill towards the minimum value.
 
-### mizing a function by following the gradi-
+For the Perceptron algorithm, each iteration the weights (w) are updated
 
-### ents of the cost function.
+using the equation
 
-### This involves knowing the form of the
+wt+1=wt+μ
 
-### cost as well as the derivative so that from
+∑
 
-### a given point you know the gradient and
+x∈M
 
-### can move in that direction, e.g. downhill
-
-### towards the minimum value.
-
-### For the Perceptron algorithm, each
-
-### iteration the weights (w) are updated
-
-### using the equation
-
-### wt+1=wt+μ
-
-### ∑
-
-##### x∈M
-
-### xa
+ xa
 
 ### where M is the set of miss-classified
 
@@ -145,19 +110,13 @@ y =
 0 −4.0000 0 0 −2.0000 −1.
 −4.0000 −9.0000 −6.0000 −2.0000 −3.0000 −1.
 ```
-### The value of w is initialized with all ze-
-
-### roes.w= [111111]
+The value of w is initialized with all zeroes. w= [111111]
 
 ## 4 TRAINING
 
-### The set the learning rateμ= 0. 1 and start
+The set the learning rateμ= 0. 1 and start our gradient decent algorithm with
 
-### our gradient decent algorithm with
-
-### The step by step numerical analysis for
-
-### 2 epoch is shown below:
+The step by step numerical analysis for 2 epoch is shown below:
 
 ```
 Epoc = 1
@@ -260,9 +219,9 @@ Number o f m i s c l a s i f i c a t i o n s = 3
 ```
 ## 5 CODE
 
-### The algorithm is implemented using
+The algorithm is implemented using
 
-### Matlab and the code is presented below:
+Matlab and the code is presented below:
 
 ### clc;
 
